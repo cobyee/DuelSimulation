@@ -4,6 +4,9 @@ public class CharacterA implements Dueler {
 	
 	private int hp;
 	
+	public CharacterA(){
+		
+	}
 	public void taunt() {
 		System.out.println("You're dead meat.");
 	}
