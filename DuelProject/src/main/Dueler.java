@@ -1,6 +1,6 @@
 package main;
 
-public interface dueler {
+public interface Dueler {
 	
 		//print a taunt
 		//later: the taunt must be different each time the method is called
