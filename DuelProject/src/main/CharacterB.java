@@ -22,4 +22,7 @@ public class CharacterB implements Dueler{
 		return hp;
 	}
 	
+	public boolean determineIfOpponentIsFair() {
+		
+	}
 }
