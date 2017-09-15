@@ -19,7 +19,21 @@ public class CharacterA implements Dueler {
 		this.hp = hp;
 	}
 	
-	public int getHp() {
+	public int getHP() {
 		return hp;
+	}
+	
+	public boolean determineIfOpponentIsFair(Dueler d, int hp) {
+		return d.getHP() == hp;
+	}
+	
+	public int getAction(Object caller) {
+		if(caller instanceof CharacterB) {
+			return 
+		}
+	}
+	
+	public void hit(Object caller) {
+		
 	}
 }
