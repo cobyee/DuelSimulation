@@ -22,7 +22,17 @@ public class CharacterB implements Dueler{
 		return hp;
 	}
 	
-	public boolean determineIfOpponentIsFair() {
-		
+	public boolean determineIfOpponentIsFair(Dueler d, int hp ) {
+		return d.getHP() == hp;
+	}
+	
+	public int getAction(Object caller) {
+		if(caller instanceof CharacterA) {
+			return 3;
+		}
+		else {
+			
+			
+		}
 	}
 }
