@@ -2,7 +2,7 @@ package main;
 
 public class CharacterB implements Dueler{
 	private int hp;
-	public characterB() {
+	public CharacterB() {
 		
 	}
 	public void taunt() {
@@ -26,13 +26,22 @@ public class CharacterB implements Dueler{
 		return d.getHP() == hp;
 	}
 	
-	public int getAction(Object caller) {
-		if(caller instanceof CharacterA) {
+	public int getAction(Dueler d) {
+		if(d instanceof CharacterA) {
 			return 3;
 		}
 		else {
+			return (int) (Math.random() * 3);
+		}
+	}	
+	
+	public void (Dueler d) {
+		if(d instanceof Duel ) {
 			
+		}else {
 			
 		}
+		
+		
 	}
 }
