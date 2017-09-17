@@ -37,7 +37,7 @@ public class CharacterB implements Dueler{
 	
 	public void (Dueler d) {
 		if(d instanceof Duel ) {
-			
+			return hi;
 		}else {
 			
 		}
