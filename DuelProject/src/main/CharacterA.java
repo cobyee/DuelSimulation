@@ -7,6 +7,7 @@ public class CharacterA implements Dueler {
 	public CharacterA(){
 		
 	}
+	
 	public void taunt() {
 		System.out.println("You're dead meat.");
 	}
@@ -15,7 +16,7 @@ public class CharacterA implements Dueler {
 		return "Coby Yee";
 	}
 	
-	public void setStartingHp(int hp){
+	public void setStartingHP(int hp){
 		this.hp = hp;
 	}
 	
@@ -27,13 +28,14 @@ public class CharacterA implements Dueler {
 		return d.getHP() == hp;
 	}
 	
-	public int getAction(Object caller) {
-		if(caller instanceof CharacterB) {
-			return 
-		}
+	public int getAction(Dueler d) {
+		return (int)(Math.random() * 3);
 	}
 	
-	public void hit(Object caller) {
+	public void hit(Dueler d) {
+		if(d instanceof Duel) {
+			
+		}
 		
 	}
 }
