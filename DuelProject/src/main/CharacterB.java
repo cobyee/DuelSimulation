@@ -35,11 +35,9 @@ public class CharacterB implements Dueler{
 		}
 	}	
 	
-	public void (Dueler d) {
+	public void hit(Dueler d) {
 		if(d instanceof Duel ) {
-			return hi;
-		}else {
-			
+			hp=hp - 10;
 		}
 		
 		
