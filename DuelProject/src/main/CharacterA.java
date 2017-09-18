@@ -29,12 +29,17 @@ public class CharacterA implements Dueler {
 	}
 	
 	public int getAction(Dueler d) {
-		return (int)(Math.random() * 3);
+		if(d instanceof CharacterA) {
+			return 3;
+		}
+		else {
+			return (int) (Math.random() * 3);
+		}
 	}
 	
 	public void hit(Dueler d) {
 		if(d instanceof Duel) {
-			
+			hp=hp - 10;
 		}
 		
 	}
