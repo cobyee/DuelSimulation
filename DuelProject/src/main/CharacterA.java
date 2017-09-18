@@ -34,7 +34,7 @@ public class CharacterA implements Dueler {
 	}
 	
 	public int getAction(Dueler d) {
-		if(d instanceof CharacterA) {
+		if(d instanceof CharacterB) {
 			return 3;
 		}
 		else {
