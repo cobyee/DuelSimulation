@@ -13,7 +13,7 @@ public class CharacterA implements Dueler {
 	}
 	
 	public String getName() {
-		return "Coby Yee";
+		return "Coby";
 	}
 	
 	public void setStartingHP(int hp){
@@ -25,7 +25,12 @@ public class CharacterA implements Dueler {
 	}
 	
 	public boolean determineIfOpponentIsFair(Dueler d, int hp) {
-		return d.getHP() == hp;
+		if(d.getHP() == hp) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 	public int getAction(Dueler d) {
