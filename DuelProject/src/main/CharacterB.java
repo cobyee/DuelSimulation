@@ -1,12 +1,13 @@
 package main;
 
 public class CharacterB implements Dueler{
-	private int hp;
+	private int hp = 0;
+	private String [] mytaunt = {"I will defeat you!", "I will destroy you!", "This duel going to be the biggest regret of your life!", "Kill  yourself" };
 	public CharacterB() {
 		
 	}
 	public void taunt() {
-		System.out.println("I will defeat you!");
+		System.out.println(mytaunt[(int) (Math.random() * 4)]);
 	}
 	
 	public String getName() {
@@ -14,7 +15,7 @@ public class CharacterB implements Dueler{
 		return "zhehao lin";
 	}
 	
-	public void setStartingHp(int hp) {
+	public void setStartingHP(int hp) {
 		this.hp = hp;
 	}
 	
@@ -26,7 +27,7 @@ public class CharacterB implements Dueler{
 		return d.getHP() == hp;
 	}
 	
-	public int getAction(Dueler d) {
+	public int getAction(Object d) {
 		if(d instanceof CharacterA) {
 			return 3;
 		}
@@ -35,11 +36,13 @@ public class CharacterB implements Dueler{
 		}
 	}	
 	
-	public void hit(Dueler d) {
+	public void hit(Object d) {
 		if(d instanceof Duel ) {
 			hp=hp - 10;
 		}
 		
 		
 	}
+	
+	
 }
