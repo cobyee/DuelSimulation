@@ -2,6 +2,8 @@ package main;
 
 public class CharacterB implements Dueler{
 	private int hp = 0;
+	private boolean isloaded = false;
+	private int randomnum = 0;
 	private String [] mytaunt = {"I will defeat you!", "I will destroy you!", "This duel going to be the biggest regret of your life!", "Kill  yourself" };
 	public CharacterB() {
 		
@@ -31,9 +33,27 @@ public class CharacterB implements Dueler{
 		if(d instanceof CharacterA) {
 			return 3;
 		}
-		else {
-			return (int) (Math.random() * 3);
-		}
+		
+			if(isloaded)
+			{
+				if(Math.random() > .5)
+				{
+					isloaded = false;
+					return 1;
+				}
+				return 2;
+			}
+			else {
+				if(Math.random() > 0.5) {
+					isloaded = true;
+					return 0;
+				}
+				else {
+					return 2;
+				}
+				
+			}
+		
 	}	
 	
 	public void hit(Object d) {
