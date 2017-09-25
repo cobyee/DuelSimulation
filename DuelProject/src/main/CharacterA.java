@@ -4,6 +4,7 @@ public class CharacterA implements Dueler {
 	
 	private int hp;
 	private String [] taunts = {"You're dead meat", "This is gonna be easy", "Good luck. You're gonna need it", "Might as well quit now", "What a joke", "Give up while you still can"};
+	private boolean loaded = false;
 	
 	public CharacterA(){
 		
@@ -38,8 +39,21 @@ public class CharacterA implements Dueler {
 		if(d instanceof CharacterB) {
 			return 3;
 		}
+		if(loaded) {
+			if(Math.random() > 0.5) {
+				loaded = false;
+				return 1;
+			}
+			return 2;
+		}
 		else {
-			return (int) (Math.random() * 3);
+			if(Math.random() > 0.5) {
+				loaded = true;
+				return 0;
+			}
+			else {
+				return 2;
+			}
 		}
 	}
 	
