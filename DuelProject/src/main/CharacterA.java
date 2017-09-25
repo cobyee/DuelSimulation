@@ -3,13 +3,14 @@ package main;
 public class CharacterA implements Dueler {
 	
 	private int hp;
+	private String [] taunts = {"You're dead meat", "This is gonna be easy", "Good luck. You're gonna need it", "Might as well quit now", "What a joke", "Give up while you still can"};
 	
 	public CharacterA(){
 		
 	}
 	
 	public void taunt() {
-		System.out.println("You're dead meat.");
+		System.out.println(taunts[(int) (Math.random() * 6)]);
 	}
 	
 	public String getName() {
@@ -33,7 +34,7 @@ public class CharacterA implements Dueler {
 		}
 	}
 	
-	public int getAction(Dueler d) {
+	public int getAction(Object d) {
 		if(d instanceof CharacterB) {
 			return 3;
 		}
@@ -42,10 +43,11 @@ public class CharacterA implements Dueler {
 		}
 	}
 	
-	public void hit(Dueler d) {
+	public void hit(Object d) {
 		if(d instanceof Duel) {
 			hp=hp - 10;
 		}
 		
 	}
+
 }
